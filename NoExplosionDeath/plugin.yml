@@ -1,0 +1,6 @@
+name: NoExplosionDeath
+main: MCPH\NoExplosionDeath\Main
+version: 1.0
+author: MinecrafterPH
+description: Disables death by explosions.
+website: http://www.minecrafterph.tk
