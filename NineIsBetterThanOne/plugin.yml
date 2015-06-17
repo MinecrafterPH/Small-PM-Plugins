@@ -1,0 +1,6 @@
+name: NineIsBetterThanOne
+main: MCPH\NIBTO\Main
+author: [MinecrafterPH (fork), Gamecrafter, HellBublz (original)]
+version: INDEV
+api: 1.12.0
+permissions:
