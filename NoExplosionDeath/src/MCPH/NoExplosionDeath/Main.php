@@ -1,6 +1,6 @@
 <?php
 
-namespace MCPH\NoExplosionDeath
+namespace MCPH\NoExplosionDeath;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\entity\EntityDamageEvent;
