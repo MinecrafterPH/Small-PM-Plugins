@@ -1,6 +1,7 @@
 name: NoDeathDrop
 main: MCPH\NoDeathDrop\Main
 version: 1.0
+api: 1.12.0
 author: MinecrafterPH
 description: Disable death drops.
 website: http://www.minecrafterph.tk
