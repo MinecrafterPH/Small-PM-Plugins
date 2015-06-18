@@ -12,11 +12,11 @@ class Main extends PluginBase implements Listener
  public function onEnable()
  {
    $this->getServer()->getPluginManager()->registerEvents($this, $this);
-   $this->getLogger()->info("DeathNoDrops has been enabled!");
+   $this->getLogger()->info("NoDeathDrop has been enabled!");
  }
  public function onDisable()
  {
-   $this->getLogger()->info("DeathNoDrops has been disabled!");
+   $this->getLogger()->info("NoDeathDrop has been disabled!");
  } 
  public function onDeath(PlayerDeathEvent $event)
  {
