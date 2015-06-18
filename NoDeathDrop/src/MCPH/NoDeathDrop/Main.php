@@ -1,6 +1,6 @@
 <?php
 
-namespace MCPH\NoDeathDrops;
+namespace MCPH\NoDeathDrop;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
