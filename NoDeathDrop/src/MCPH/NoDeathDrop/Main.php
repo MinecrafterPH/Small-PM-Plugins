@@ -2,6 +2,8 @@
 
 namespace MCPH\NoDeathDrop;
 
+use pocketmine\Player;
+use pocketmine\Server;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerDeathEvent;
