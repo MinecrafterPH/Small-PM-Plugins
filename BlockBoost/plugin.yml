@@ -1,0 +1,6 @@
+name: BlockBoost
+main: MCPH\BlockBoost\Main
+version: INDEV
+author: MinecrafterPH
+description: Gives a speed boost when walking on a redstone block.
+website: http://www.minecrafterph.tk
