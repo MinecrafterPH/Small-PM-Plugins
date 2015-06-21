@@ -27,8 +27,9 @@ class Main extends PluginBase implements Listener
     $player = $event->getPlayer();
     $from = $event->getFrom();
     $to = $event->getTo();
-    if($from->getLevel()->getBlockIdAt($from->x, $from->y - 1, $from->z) === Block::REDSTONE_BLOCK){
-        $player->setMotion((new Vector3($to->x - $from->x, $to->y - $from->y, $to->z - $from->z))->multiply(5));
+    if($from->getLevel()->getBlockIdAt($from->x, $from->y - 1, $from->z) === Block::REDSTONE_BLOCK)
+    {
+      $player->setMotion((new Vector3($to->x - $from->x, $to->y - $from->y, $to->z - $from->z))->multiply(5));
     }
   }
 }  
