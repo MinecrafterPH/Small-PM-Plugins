@@ -75,5 +75,6 @@ class Main extends PluginBase
   public function disableInvisibility(Player $player)
   {
   /* TODO */
+  unset($this->players[$player->getName()]);
   $player->sendMessage(TextFormat::RED . "You have disabled invisibility!");
   }
