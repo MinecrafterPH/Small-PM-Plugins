@@ -4,3 +4,18 @@ version: INDEV
 author: MinecrafterPH
 description: Makes you invisible with a single command.
 website: http://www.minecrafterph.tk
+api: [1.12.0]
+
+commands:
+  invis-on:
+    description: "Turns on invisibility."
+  invis-off:
+    description: "Turns off invisibility."
+
+permissions:
+  invisible.on:
+    description: Allows players to be invisible.
+    default: op
+  invisible.off:
+    description: Disallows players to be invisible.
+    default: op
