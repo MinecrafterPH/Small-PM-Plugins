@@ -1,0 +1,6 @@
+name: ClosestPlayer
+main: MCPH\ClosestPlayer\Main
+version: 1.0
+author: MinecrafterPH
+description: Find out who's the closest player to you.
+website: http://www.minecrafterph.tk
