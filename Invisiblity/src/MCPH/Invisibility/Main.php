@@ -63,13 +63,13 @@ class Main extends PluginBase
   public function enableInvisibility(Player $player)
   {
     $player->setDataFlag(Entity::DATA_FLAGS, Entity::DATA_FLAG_INVISIBLE, true);
-		$player->setDataProperty(Entity::DATA_SHOW_NAMETAG, Entity::DATA_TYPE_BYTE, 0);
+    $player->setDataProperty(Entity::DATA_SHOW_NAMETAG, Entity::DATA_TYPE_BYTE, 0);
     $player->sendMessage(TextFormat::GREEN . "You have enabled invisibility!");
   }
   
   public function disableInvisibility(Player $player)
   {
-  $entity->setDataFlag(Entity::DATA_FLAGS, Entity::DATA_FLAG_INVISIBLE, false);
-	$entity->setDataProperty(Entity::DATA_SHOW_NAMETAG, Entity::DATA_TYPE_BYTE, 1);
-  $player->sendMessage(TextFormat::RED . "You have disabled invisibility!");
+    $entity->setDataFlag(Entity::DATA_FLAGS, Entity::DATA_FLAG_INVISIBLE, false);
+    $entity->setDataProperty(Entity::DATA_SHOW_NAMETAG, Entity::DATA_TYPE_BYTE, 1);
+    $player->sendMessage(TextFormat::RED . "You have disabled invisibility!");
   }
