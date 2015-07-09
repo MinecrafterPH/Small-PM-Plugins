@@ -6,13 +6,11 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\entity\Effect;
+use pocketmine\entity\Entity;
 use pocketmine\Player;
 
 class Main extends PluginBase
 {
-  
-  private $players = array();
   
   public function onEnable()
   {
@@ -64,17 +62,14 @@ class Main extends PluginBase
   
   public function enableInvisibility(Player $player)
   {
-    $this->players[$player->getName()] = $player->getName();
-    $effect = Effect::getEffect("14");
-    $effect->setVisible(false);
-    $effect->setDuration("99999999999999999");
-    $player->addEffect($effect);
+    $player->setDataFlag(Entity::DATA_FLAGS, Entity::DATA_FLAG_INVISIBLE, true);
+		$player->setDataProperty(Entity::DATA_SHOW_NAMETAG, Entity::DATA_TYPE_BYTE, 0);
     $player->sendMessage(TextFormat::GREEN . "You have enabled invisibility!");
   }
   
   public function disableInvisibility(Player $player)
   {
-  /* TODO */
-  unset($this->players[$player->getName()]);
+  $entity->setDataFlag(Entity::DATA_FLAGS, Entity::DATA_FLAG_INVISIBLE, false);
+	$entity->setDataProperty(Entity::DATA_SHOW_NAMETAG, Entity::DATA_TYPE_BYTE, 1);
   $player->sendMessage(TextFormat::RED . "You have disabled invisibility!");
   }
