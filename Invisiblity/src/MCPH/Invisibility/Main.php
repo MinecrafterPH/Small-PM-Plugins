@@ -73,3 +73,4 @@ class Main extends PluginBase
     $sender->setDataProperty(Entity::DATA_SHOW_NAMETAG, Entity::DATA_TYPE_BYTE, 1);
     $sender->sendMessage(TextFormat::RED . "You have disabled invisibility!");
   }
+}
