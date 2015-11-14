@@ -1,0 +1,6 @@
+name: DeathLight
+main: MCPH\DeathLight\Main
+version: INDEV
+author: MinecrafterPH
+description: Get struck by lightning upon death.
+website: http://www.minecrafterph.tk
