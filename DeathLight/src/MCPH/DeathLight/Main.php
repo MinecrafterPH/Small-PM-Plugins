@@ -21,7 +21,7 @@ class Main extends PluginBase implements Listener
     $this->getLogger()->info("DeathLight has been disabled.");
   }
   
-  public function onMove(PlayerMoveEvent $e)
+  public function onDeath(PlayerDeathEvent $e)
   {
     $p = $e->getPlayer();
     $light = new AddEntityPacket();
