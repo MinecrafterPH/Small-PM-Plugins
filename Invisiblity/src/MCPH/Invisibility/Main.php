@@ -64,13 +64,13 @@ class Main extends PluginBase
   {
     $sender->setDataFlag(Entity::DATA_FLAGS, Entity::DATA_FLAG_INVISIBLE, true);
     $sender->setDataProperty(Entity::DATA_SHOW_NAMETAG, Entity::DATA_TYPE_BYTE, 0);
-    $sender->sendMessage(TextFormat::GREEN . "You have enabled invisibility!");
+    $sender->sendMessage(TextFormat::GREEN . "You are now invisible!");
   }
   
   public function disableInvisibility($sender)
   {
     $sender->setDataFlag(Entity::DATA_FLAGS, Entity::DATA_FLAG_INVISIBLE, false);
     $sender->setDataProperty(Entity::DATA_SHOW_NAMETAG, Entity::DATA_TYPE_BYTE, 1);
-    $sender->sendMessage(TextFormat::RED . "You have disabled invisibility!");
+    $sender->sendMessage(TextFormat::RED . "You are no longer invisible.");
   }
 }
