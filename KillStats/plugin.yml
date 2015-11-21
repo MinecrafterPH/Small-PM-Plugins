@@ -1,5 +1,16 @@
 name: KillStats
+main: MCPH\KillStats\Main
 version: 1.0
+api: 1.13.0
 author: MinecrafterPH
 description: Get your number of kills.
 website: www.minecrafterph.tk
+
+commands:
+  kills:
+    description: "Shows your number of kills."
+    
+permissions:
+  stats.kills:
+    description: Allows to show your number of kills.
+    default: true
