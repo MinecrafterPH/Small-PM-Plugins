@@ -4,6 +4,7 @@ namespace MCPH\KillStats;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
+use pocketmine\utils\Config;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\event\Listener;
@@ -52,19 +53,19 @@ class Main extends PluginBase implements Listener
   public function onPlayerDeathEvent(PlayerDeathEvent $event)
   {
     $player = $event->getEntity();
-		if ($player instanceof Player)
-		{
-		  $cause = $player->getLastDamageCause();
-		  if($cause instanceof EntityDamageByEntityEvent)
-		  {
-		    $damager = $cause->getDamager();
-		    if($damager instanceof Player)
-		    {
-		      $damagername = strtolower($damager->getName());
-		      $this->config->setNested($damagername . ".kills", $this->config->getNested($damagername . ".kills") + 1);
+    if ($player instanceof Player)
+    {
+      $cause = $player->getLastDamageCause();
+      if($cause instanceof EntityDamageByEntityEvent)
+      {
+        $damager = $cause->getDamager();
+        if($damager instanceof Player)
+        {
+          $damagername = strtolower($damager->getName());
+          $this->config->setNested($damagername . ".kills", $this->config->getNested($damagername . ".kills") + 1);
           $this->config->save(); // Important!
-		    }
-		  }
-		}
+        }
+      }
+    }
   }
 }
