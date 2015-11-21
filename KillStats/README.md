@@ -1,2 +1,2 @@
 # KillStats
-###### Get you number of kills.
+###### Get your number of kills.
