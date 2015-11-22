@@ -5,8 +5,10 @@ namespace MCPH\DeathLight;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerDeathEvent;
+use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\network\protocol\AddEntityPacket;
 use pocketmine\entity\Entity;
+use pocketmine\Player;
 
 class Main extends PluginBase implements Listener
 {
@@ -25,17 +27,22 @@ class Main extends PluginBase implements Listener
   public function onDeath(PlayerDeathEvent $e)
   {
     $p = $e->getPlayer();
-    $light = new AddEntityPacket();
-    $light->type = 93;
-    $light->eid = Entity::$entityCount++;
-    $light->metadata = array();
-    $light->speedX = 0;
-    $light->speedY = 0;
-    $light->speedZ = 0;
-    $light->x = $p->x;
-    $light->y = $p->y;
-    $light->z = $p->z;
-    $p->dataPacket($light);
+    if($p instanceof Player) {
+      $cause = $p->getLastDamageCause();
+      if($cause instanceof EntityDamageByEntityEvent) {
+        $light = new AddEntityPacket();
+        $light->type = 93;
+        $light->eid = Entity::$entityCount++;
+        $light->metadata = array();
+        $light->speedX = 0;
+        $light->speedY = 0;
+        $light->speedZ = 0;
+        $light->x = $p->x;
+        $light->y = $p->y;
+        $light->z = $p->z;
+        $p->dataPacket($light);
+      }
+    }  
   }
 }  
   
